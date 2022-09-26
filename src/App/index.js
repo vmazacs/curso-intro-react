@@ -11,6 +11,7 @@ import { TodosError } from '../TodosError';
 import { TodosLoading } from '../TodosLoading';
 import { EmptyTodos } from '../EmptyTodos';
 import { Modal } from '../Modal';
+import { ChangeAlertWithStorageListener } from '../ChangeAlert';
 
 function App() {
   const { 
@@ -101,6 +102,8 @@ function App() {
         <CreateTodoButton 
             setOpenModal={setOpenModal}
         />
+
+        <ChangeAlertWithStorageListener />
     </React.Fragment>
   );
 }
