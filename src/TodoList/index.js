@@ -14,15 +14,9 @@ function TodoList(props) {
 
             {(!!props.totalTodos && !props.searchedTodos.length) && props.onEmptySearchResults(props.searchText)}
 
-            {props.searchedTodos.map(renderFunc)}
+            {(!props.loading && !props.error) && props.searchedTodos.map(renderFunc)}
             {/* this is another way to map each todo: */}
             {/* props.searchedTodos.map(props.children)*/}
-
-            <ul>
-
-                {props.children}
-
-            </ul>
         </section>
 
     );
